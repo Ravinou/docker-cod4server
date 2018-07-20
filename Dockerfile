@@ -5,7 +5,7 @@ LABEL author="Raven"
 RUN dpkg --add-architecture i386 \ 
     && apt-get -y update \
     && apt-get -y upgrade \
-    && apt-get -y install mailutils postfix curl wget file bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils bc tmux lib32gcc1 libstdc++6 libstdc++6:i386 vim procps locales
+    && apt-get -y install mailutils postfix curl wget file bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils bc tmux lib32gcc1 libstdc++6 libstdc++6:i386 vim procps locales net-tools
 
 # Parametrage de la locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
