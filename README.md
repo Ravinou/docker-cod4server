@@ -24,3 +24,15 @@ En tant qu'utilisateur "cod4server" vous pourrez lancer les commandes suivantes 
 **restart**
 
 `./cod4server restart`
+
+**détails**
+
+*Détails sur les ports, les fichiers de config, les rconpass etc...*
+
+`./cod4server details`
+
+**Logs**
+
+`/home/cod4server/logs`
+
+Autres commandes : https://linuxgsm.com/lgsm/cod4server/
