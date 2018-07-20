@@ -5,7 +5,7 @@ LABEL author="Raven"
 RUN dpkg --add-architecture i386 \ 
     && apt-get -y update \
     && apt-get -y upgrade \
-    && apt-get -y install
+    && apt-get -y install \
     mailutils \
     postfix \
     curl \
@@ -27,7 +27,7 @@ RUN dpkg --add-architecture i386 \
     vim \
     procps \
     locales \
-    net-tools \
+    net-tools
 
 # Parametrage de la locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
