@@ -49,3 +49,10 @@ USER cod4server
 #Installation du serveur
 RUN bash linuxgsm.sh cod4server
 RUN printf 'Y\nyes' | ./cod4server install
+
+#Installation du Promod
+RUN wget -O promod.zip https://promod.github.io/releases/promodlive220_eu.zip \
+    && unzip promod.zip -d promod \
+    && mv /home/cod4server/promod/pml220 /home/cod4server/serverfiles/Mods/ \
+    && rm -rf /home/cod4server/promod/ \
+    && rm -rf /home/cod4server/promod.zip
