@@ -1,8 +1,6 @@
-#!/usr/bin/env bash
-#Si execution en tant que user root, le script doit l'être en tant que user cod4server, donc remplacez par : su - cod4server -s /bin/bash -c "/home/cod4server/cod4server start
-
+#!/usr/bin/env sh
 set -e
 
 if [ "$1" = 'start' ]; then
-	/home/cod4server/cod4server start
+	/home/cod4server/serverfiles/cod4x18_dedrun +set sv_punkbuster 0 +set fs_basepath /home/cod4server/serverfiles +set dedicated 2 +set sv_maxclients 32 +exec cod4server.cfg +map mp_crash +set fs_game Mods/pml220
 fi
