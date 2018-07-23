@@ -43,6 +43,12 @@ Autres commandes : https://linuxgsm.com/lgsm/cod4server/
 
 En cours de rédaction
 
+Lancement : 
+
+```
+docker run -d -v /data/docker/cod4server/Volume:/home/cod4server/config -p 28960:28960/tcp -p 28960:28960/udp cod4server
+```
+
 #Volumes
 Montage des volumes
 Trois volumes à monter pour : 
