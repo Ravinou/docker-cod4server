@@ -66,7 +66,6 @@ RUN rm /home/cod4server/serverfiles/main/cod4server.cfg \
     && ln -s /home/cod4server/config/config.cfg /home/cod4server/serverfiles/main/cod4server.cfg \
     && ln -s /home/cod4server/config/config-daemon.cfg /home/cod4server/lgsm/config-lgsm/cod4server/cod4server.cfg
 
-COPY entrypoint.sh /home/cod4server
-
-ENTRYPOINT ["/entrypoint.sh"]
+COPY ./entrypoint.sh /home/cod4server/
+ENTRYPOINT ["/home/cod4server/entrypoint.sh"]
 CMD ["start"]
