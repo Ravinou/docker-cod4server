@@ -20,6 +20,7 @@ RUN dpkg --add-architecture i386 \
        ca-certificates \
        binutils \
        bc \
+       jq \
        tmux \
        lib32gcc1 \
        libstdc++6 \
