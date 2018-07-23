@@ -57,5 +57,13 @@ RUN wget -O promod.zip https://promod.github.io/releases/promodlive220_eu.zip \
     && rm -rf /home/cod4server/promod/ \
     && rm -rf /home/cod4server/promod.zip
 
+#Installation des conf serveur pour accès par VOLUMES
+RUN mkdir /home/cod4server/config
+VOLUME /home/cod4server/config
+RUN rm /home/cod4server/serverfiles/main/cod4server.cfg \
+    && rm /home/cod4server/lgsm/config-lgsm/cod4server/cod4server.cfg \
+    && ln -s /home/cod4server/config/config.cfg /home/cod4server/serverfiles/main/cod4server.cfg \
+    && ln -s /home/cod4server/config/config-daemon.cfg /home/cod4server/lgsm/config-lgsm/cod4server/cod4server.cfg
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["start"]
