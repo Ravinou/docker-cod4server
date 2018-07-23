@@ -56,3 +56,6 @@ RUN wget -O promod.zip https://promod.github.io/releases/promodlive220_eu.zip \
     && mv /home/cod4server/promod/pml220 /home/cod4server/serverfiles/Mods/ \
     && rm -rf /home/cod4server/promod/ \
     && rm -rf /home/cod4server/promod.zip
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["start"]
